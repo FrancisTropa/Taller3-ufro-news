@@ -1,6 +1,6 @@
 <template>
   <div class="card-container">
-    <Noticias v-for="n in noticias" :key="n._id" :titulo="n.title" :img="n.imageUrl" :source="n.source"/>
+    <Noticias v-for="n in noticias" :key="n._id" :newsId="n.newsId" :titulo="n.title" :img="n.imageUrl" :source="n.source"/>
   </div>
 </template>
 

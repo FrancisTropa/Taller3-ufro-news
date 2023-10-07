@@ -4,13 +4,16 @@
       <div class="card-body">
         <h5 class="card-title">{{ titulo }}</h5>
         <a :href="source" class="btn btn-primary">Leer más</a>
+        <router-link :to="'/noticia/' + newsId" class="btn btn-primary">Ver detalles</router-link>
       </div>
     </div>
   </template>
   
   <script>
   export default {
-    props: ['titulo',
+    props: [
+      'newsId',
+      'titulo',
       'img',
       'source'],
   }
