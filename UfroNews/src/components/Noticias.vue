@@ -3,8 +3,10 @@
       <img :src="img" class="card-img">
       <div class="card-body">
         <h5 class="card-title">{{ titulo }}</h5>
-        <a :href="source" class="btn btn-primary">Leer más</a>
-        <router-link :to="'/noticia/' + newsId" class="btn btn-primary">Ver detalles</router-link>
+        <div class="access-btn">
+          <router-link :to="'/noticia/' + newsId" class="btn btn-primary">Ver detalles</router-link>
+          <a :href="source" class="btn btn-primary">Leer más</a>
+        </div>
       </div>
     </div>
   </template>
@@ -35,6 +37,12 @@
 
   .card-title{
     margin-bottom: 10px;
+  }
+
+  .access-btn{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
   }
 
   .btn-primary{
