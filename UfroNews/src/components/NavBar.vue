@@ -2,7 +2,7 @@
     <div class="navbar navbar-color">
         <img src="@/assets/images/UFRO horizontal.png" class="logo" alt="Ufro logo" width="300" height="100">
         <nav class="nav">
-            <RouterLink class="nav-link" to="/noticias">Noticias</RouterLink>
+            <RouterLink class="nav-link" to="/">Noticias</RouterLink>
             <RouterLink class="nav-link" to="/eventos">Eventos</RouterLink>
         </nav>
     </div>
@@ -20,7 +20,7 @@
     }
 
     .navbar-color{
-        background-color: antiquewhite;
+        background-color: rgb(189, 188, 186);
     }
 
     .logo{
@@ -32,5 +32,13 @@
     .nav-link{
         margin: 10px;
         padding: 10px;
+        color: black;
+        font-size: large;
+        border-radius: 5px;
     }
+
+    .nav-link:hover{
+        background-color: rgb(245, 245, 238);
+    }
+
 </style>

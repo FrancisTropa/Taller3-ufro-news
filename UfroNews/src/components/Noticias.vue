@@ -1,34 +1,48 @@
-<script setup>
-    import { ref, onMounted } from 'vue'
-    import axios from 'axios';
-
-    const props = defineProps({
-        id: {
-            type: String,
-            required: true
-        },
-        news_id: {
-            type: String,
-            required: true
-        },
-        titulo: {
-            type: String,
-            required: true
-        },
-        img: {
-            type: String,
-            required: true
-        },
-        source: {
-            type: String,
-            required: true
-        }
-    })
-</script>
-
 <template>
+    <div class="card">
+      <img :src="img" class="card-img">
+      <div class="card-body">
+        <h5 class="card-title">{{ titulo }}</h5>
+        <a :href="source" class="btn btn-primary">Leer más</a>
+      </div>
+    </div>
+  </template>
+  
+  <script>
+  export default {
+    props: ['titulo',
+      'img',
+      'source'],
+  }
+  </script>
+  
+  <style scoped>
+  .card {
+    width: 25rem;
+    background-color: beige;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  .card-img {
+    width: 100%;
+    height: auto;
+    padding-top: 15px;
+  }
 
-</template>
+  .card-title{
+    margin-bottom: 10px;
+  }
 
-<style>
-</style>
+  .btn-primary{
+    font-size: larger;
+    color: aliceblue;
+    background-color: rgb(86, 86, 201);
+    padding: 5px;
+    border-radius: 10px;
+  }
+
+  .btn-primary:hover{
+    background-color: rgb(129, 188, 255);
+  }
+  </style>

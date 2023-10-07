@@ -1,25 +1,18 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-import NavBar from './components/NavBar.vue';
-</script>
-
 <template>
-  <NavBar />
-  
-
-  
+  <div>
+    <NavBar />
+    <router-view/>
+  </div>
 </template>
+
+<script setup>
+  import NavBar from './components/NavBar.vue';
+</script>
 
 <style scoped>
 header {
   line-height: 1.5;
   max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
 }
 
 nav {
